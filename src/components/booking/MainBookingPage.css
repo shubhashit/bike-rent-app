@@ -1,0 +1,26 @@
+.body {
+    color: white;
+    height: 100vh;
+    background: linear-gradient(to bottom right, rgb(3, 62, 94), rgb(1, 0, 13) 20%, rgb(3, 62, 94) 150%);
+}
+.book{
+    transition: all 0.2s;
+        font-size: 18px;
+        border-radius: 7px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 4px;
+        background-color: rgba(240, 248, 255, 0.16);
+        border: 3px solid rgb(107, 124, 255);
+        color: rgb(107, 124, 255);
+}
+
+.book:hover {
+    background-color: rgb(107, 124, 255);
+    color: white;
+    transform: scale(1.1);
+}
+.popup{
+    background: linear-gradient(to bottom right, rgb(3, 62, 94), rgb(1, 0, 13) 20%, rgb(3, 62, 94) 150%);
+
+}

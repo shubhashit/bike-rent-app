@@ -1,0 +1,99 @@
+.body{
+    color: white;
+    height: 100vh;
+    background:linear-gradient(to bottom right, rgb(3, 62, 94)  , rgb(1, 0, 13) 20% ,rgb(3, 62, 94) 150%);
+}
+
+
+.home,.contact,.working{
+    top: 27%;
+    right: 23%;
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    transform: scale(0);
+    transition: all 0.2s;
+    width: 10vw;
+    height: 10vw;
+    overflow:hidden ;
+    border-radius: 50%;
+    box-shadow: 0px 1px 20px rgba(108, 196, 255, 0.747);
+    color: rgb(132, 208, 255);
+    background:hsla(0, 0%, 14%, 0.689);
+}
+.home p{
+    font-size: 10px;
+}
+.home h1{
+    text-decoration: underline;
+    font-size: 14px;
+}
+.contact p{
+    font-size: 10px;
+}
+.contact h1{
+    text-decoration: underline;
+    font-size: 14px;
+}
+.working p{
+    font-size: 10px;
+}
+.working h1{
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.image{
+    width: 50%;
+    z-index: 222;
+    height: 80%;
+    position: absolute;
+    right: 20px;
+    top: 20%;
+}
+
+.home:hover, .contact:hover, .working:hover{
+    background-color: rgb(109, 168, 205);
+    color: white ;
+    transform: scale(1.7);
+}
+
+.image img{
+    width: 30vw;
+    transform: rotate(-3deg);
+    position: absolute;
+    right: 20px;
+    top: 20%;
+}
+
+.booking-info{
+    /* position: absolute; */
+    z-index: 2;
+    top: 30%;
+    text-align: center;
+    left: 17%;
+    width: 30%;
+    height: 35%;
+    border: 3px solid rgb(107, 124, 255);
+    border-radius: 17px;
+}
+
+.booking-info button{
+    transition: all 0.2s;
+    font-size: 18px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 4px;
+    background-color: rgba(240, 248, 255, 0.16);
+    border: 3px solid rgb(107, 124, 255);
+    color:rgb(107, 124, 255);
+}
+.booking-info button:hover{
+    background-color: rgb(107, 124, 255);
+    color: white;
+    transform: scale(1.1);
+}
+
