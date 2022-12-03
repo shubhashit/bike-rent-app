@@ -3,6 +3,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from '../backend/firebase'
 import './style.css'
 import { useNavigate } from 'react-router-dom';
+import {doc, setDoc} from 'firebase/firestore';
+import {db} from '../backend/firebase';
 
 function Header(e) {
   const navigate = useNavigate();
@@ -14,7 +16,7 @@ function Header(e) {
     const provider = new GoogleAuthProvider(app);
     const auth = getAuth(app);
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then(async (result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -22,6 +24,13 @@ function Header(e) {
         const user = result.user;
         // ...
         console.log(user);
+        await setDoc(doc(db, "users", user.email), {
+          uid: user.uid,
+          email: user.email,
+          scholarNumber: '',
+          YearOfStudy: '',
+          collegeName: '',
+        });
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;

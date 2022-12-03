@@ -1,5 +1,5 @@
 .header{
-    background-color: rgba(154, 154, 154, 0.311);
+    /* background-color: rgba(154, 154, 154, 0.311); */
     color:rgb(0, 0, 0);
     align-items: center;
     padding: 0px 20px;
@@ -7,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     height: 10vh;
+    background: #7dbec5;
+    /* background: #98cec0; */
 }
 
 .logo{

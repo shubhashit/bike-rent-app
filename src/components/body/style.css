@@ -1,11 +1,15 @@
-.body{
-    color: white;
+.body {
     height: 100vh;
-    background:linear-gradient(to bottom right, rgb(3, 62, 94)  , rgb(1, 0, 13) 20% ,rgb(3, 62, 94) 150%);
+    background-color: #f0feff;
+    background-color: #98cbd1;
+    background: linear-gradient(145deg, #b3cccf, #d5f3f6);
+
 }
 
 
-.home,.contact,.working{
+.home,
+.contact,
+.working {
     top: 27%;
     right: 23%;
     cursor: pointer;
@@ -16,35 +20,41 @@
     transition: all 0.2s;
     width: 10vw;
     height: 10vw;
-    overflow:hidden ;
+    overflow: hidden;
     border-radius: 50%;
     box-shadow: 0px 1px 20px rgba(108, 196, 255, 0.747);
     color: rgb(132, 208, 255);
-    background:hsla(0, 0%, 14%, 0.689);
+    background: hsla(0, 0%, 14%, 0.689);
 }
-.home p{
+
+.home p {
     font-size: 10px;
 }
-.home h1{
-    text-decoration: underline;
-    font-size: 14px;
-}
-.contact p{
-    font-size: 10px;
-}
-.contact h1{
-    text-decoration: underline;
-    font-size: 14px;
-}
-.working p{
-    font-size: 10px;
-}
-.working h1{
+
+.home h1 {
     text-decoration: underline;
     font-size: 14px;
 }
 
-.image{
+.contact p {
+    font-size: 10px;
+}
+
+.contact h1 {
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.working p {
+    font-size: 10px;
+}
+
+.working h1 {
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.image {
     width: 50%;
     z-index: 222;
     height: 80%;
@@ -53,47 +63,93 @@
     top: 20%;
 }
 
-.home:hover, .contact:hover, .working:hover{
+.home:hover,
+.contact:hover,
+.working:hover {
     background-color: rgb(109, 168, 205);
-    color: white ;
+    color: white;
     transform: scale(1.7);
 }
 
-.image img{
+.image img {
     width: 30vw;
-    transform: rotate(-3deg);
+    /* transform: rotate(-3deg); */
     position: absolute;
     right: 20px;
-    top: 20%;
+    top: 10%;
 }
 
-.booking-info{
+.booking-info {
     /* position: absolute; */
     z-index: 2;
     top: 30%;
     text-align: center;
     left: 17%;
-    width: 30%;
+    width: 25%;
     height: 35%;
-    border: 3px solid rgb(107, 124, 255);
-    border-radius: 17px;
+    /* border: 3px solid rgb(107, 124, 255); */
+    border-radius: 50px;
+    background: linear-gradient(145deg, #b3cccf, #d5f3f6);
+    box-shadow: 22px 22px 38px #839698,
+        -22px -22px 38px #ffffff;
 }
 
-.booking-info button{
+.booking-info button {
     transition: all 0.2s;
     font-size: 18px;
     border-radius: 7px;
     font-weight: bold;
     cursor: pointer;
-    padding: 6px;
-    margin-top: 4px;
+    /* padding: 6px; */
+    /* margin-top: 4px; */
     background-color: rgba(240, 248, 255, 0.16);
     border: 3px solid rgb(107, 124, 255);
-    color:rgb(107, 124, 255);
+    color: rgb(107, 124, 255);
 }
-.booking-info button:hover{
+
+.booking-info button:hover {
     background-color: rgb(107, 124, 255);
     color: white;
     transform: scale(1.1);
 }
 
+#feature-1 {
+    /* border-radius: 50px; */
+    /* border-radius: 50px; */
+    background: linear-gradient(315deg, #a1b8ba, #c0dadd);
+    box-shadow: -22px -22px 38px #768789,
+        22px 22px 38px #f0ffff;
+}
+
+#feature-2 {
+    background: linear-gradient(315deg, #a7c1c3, #c7e5e8);
+    box-shadow: -22px -22px 38px #7b8d8f,
+        22px 17px 38px #f9ffff;
+}
+
+#feature-3 {
+    background: linear-gradient(131deg, #a7c1c3, #c7e5e8);
+    ;
+
+    box-shadow: -22px -22px 38px #7b8d8f,
+        22px 4px 38px #f9ffff;
+}
+
+#feature-4 {
+    background: linear-gradient(225deg, #a7c1c3, #c7e5e8);
+    box-shadow: -22px 22px 38px #7b8d8f,
+        22px -22px 38px #f9ffff;
+}
+
+#feature-5 {
+    background: linear-gradient(225deg, #a7c1c3, #c7e5e8);
+    box-shadow: -22px 22px 38px #7b8d8f,
+        22px -22px 38px #f9ffff;
+}
+
+.featureclass:hover {
+
+    background: linear-gradient(225deg, #a7c1c3, #c7e5e8);
+    /* box-shadow: -22px 22px 100px #7b8d8f, */
+        /* 22px -22px 100px #f9ffff; */
+}
