@@ -48,7 +48,7 @@ function Body() {
 
             <div className="booking-info   absolute right-1/2 p-4 flex justify-center flex-col items-center hover:scale-110">
                 <h1 className='text-3xl mb-2'> <strong>Search for training</strong></h1>
-                <p className='' style={{fontSize:'17px'}}>Look for new opportunities which will Switch ON your Skill O meter and help you boost your CV and academics</p>
+                <p className='' >Look for new opportunities which will Switch ON your Skill O meter and help you boost your CV and academics</p>
                 <button className='w-2/5 mt-3' onClick={navigateToBookingPage}>Book Now</button>
             </div>
 
@@ -62,8 +62,8 @@ function Body() {
                 <Howitworks /> */}
                 <Features content='Right to choose from wide network of industries' imagediv = {imagediv} num='1' top = '-10%' right= '30%' ></Features>
                 <Features content='offline training courses internship mentorship and much more' imagediv = {imagediv} num='2' top = '5%' right= '50%'></Features>
-                <Features content='one to one mentroship from college aluminies and seniors' imagediv = {imagediv} num='3' top = '30%' right= '65%'></Features>
-                <Features content='customized timeline and per achadmic convinence' imagediv = {imagediv} num='4' top = '60%' right= '55%'></Features>
+                <Features content='one to one mentorship from college aluminizes and seniors' imagediv = {imagediv} num='3' top = '30%' right= '65%'></Features>
+                <Features content='customized timelines as per academic convenience' imagediv = {imagediv} num='4' top = '60%' right= '55%'></Features>
                 <Features content='boost your CV with projects and reports' imagediv = {imagediv} num='5' top = '73%' right= '30%'></Features>
             </div>
             <div className=' overflow-hidden absolute bottom-0 h-5 w-full bg-black text-white flex justify-between z-20 items-center'>

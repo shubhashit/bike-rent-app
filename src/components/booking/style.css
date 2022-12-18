@@ -9,22 +9,22 @@
     height: 10vh;
     background: #51a8b1;
 } */
-.logo{
-    flex:0.1;
+.logo {
+    flex: 0.1;
 }
 
-.options{
+.options {
     flex: 0.4;
 }
 
-.option-list{
+.option-list {
     width: 100%;
     display: flex;
     justify-content: space-around;
     list-style: none;
 }
 
-.sign-in{
+.sign-in {
     font-size: 18px;
     border-radius: 7px;
     font-weight: bold;
@@ -32,15 +32,95 @@
     padding: 5px;
     background-color: rgba(240, 248, 255, 0.16);
     border: 3px solid rgb(107, 124, 255);
-    color:rgb(107, 124, 255);
+    color: rgb(107, 124, 255);
     transition: all 0.2s;
 }
-.sign-in:hover{
+
+.sign-in:hover {
     background-color: rgb(107, 124, 255);
     transform: scale(1.1);
     color: white;
 }
 
+.mainInfo:hover {
+    transform: rotateY(180deg);
+}
+
 /* .btn{
     flex: 0.2;
 } */
+
+.flip-card {
+    /* background-color: transparent; */
+    /* width: 300px;
+    height: 200px; */
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    margin-bottom: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    /* background-color: #bbb; */
+
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    background: #78cdd6;
+    /* background: #72e1ee; */
+    transform: rotateY(180deg);
+
+}
+
+
+@media all and (max-width: 600px) {
+    .bikeComponentHolder {
+        display: none;
+    }
+
+    .courseInfo {
+        background: red;
+        width: fit-content;
+        margin-bottom: 10px;
+        width: fit-content;
+        margin-bottom: 10px;
+        height: 600px;
+        margin-top: 35px;
+    }
+
+    .bikeComponentHolder2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            background: linear-gradient(145deg, #b3cccf, #d5f3f6);
+    }
+}

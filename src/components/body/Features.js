@@ -27,13 +27,13 @@ export default function Features(props) {
   }
   animateFeatures();
   return (
-      <div id={`feature-${props.num}`}  className='absolute top-0  rounded-full w-32 h-32 flex items-center flex-col justify-center features scale-0 transition-all ease-in-out hover:scale-125 hover:z-40 hover:font-bold featureclass' style={{top:`30%`, right:`20%`}}>
+      <div id={`feature-${props.num}`}  className='absolute top-0  rounded-full  h-32 flex items-center flex-col justify-center features scale-0 transition-all ease-in-out hover:scale-125 hover:z-40 hover:font-bold featureclass' style={{top:`30%`, right:`20%`,width:'9vw',height:'9vw'}}>
           {/* <h1>Home</h1> */}
           <p className='text-sm text-center pr-1 pl-1' >{props.content}</p>
 
-          {/* 2 offline training courses internship mentorship and much more
-          3 one to one mentroship from college aluminies and seniors 
-          4 customized timeline and per achadmic convinence 
+      {/* 2 offline training courses internship mentorship and much more
+          3 one to one mentorship from college aluminizes and seniors
+          4 customized timelines as per academic convenience
           5 boost your CV with projects and reports */}
       </div>
   )

@@ -5,16 +5,16 @@ import Header from './Header'
 import Bike from './Bike'
 import './MainBookingPage.css'
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
-import {app} from '../backend/firebase'
+import { app } from '../backend/firebase'
 import { db } from "../backend/firebase";
 
 export default function MainBookingPage() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e);console.log(e.target[0]);
-    if(!e.target[4].files[0]){
-      return ;
+    console.log(e); console.log(e.target[0]);
+    if (!e.target[4].files[0]) {
+      return;
     }
     const file = e.target[4].files[0];
     const scholarNumber = e.target[0].value;
@@ -54,7 +54,7 @@ export default function MainBookingPage() {
           console.log('File available at', downloadURL);
         });
 
-        const userref = doc(db, "users",email );
+        const userref = doc(db, "users", email);
 
         // Set the "capital" field of the city 'DC'
         await updateDoc(userref, {
@@ -79,29 +79,30 @@ export default function MainBookingPage() {
     document.getElementById('popup').classList.add('top-1/4');
     // document.getElementById('popup').style.top('300px');
   }
-  const close =()=>{
+  const close = () => {
 
     document.getElementById('popup').classList.remove('top-1/4');
     document.getElementById('popup').classList.add('-top-2/4');
   }
   return (
     <div id='bookingPage' className='body top'>
-      {/* <div> */}
-
-        <Header></Header>
-        <div className=' m-6 p-1 h-2/3 flex justify-evenly'>
-        <Bike onBook={onBook} data='ROBONAUTS INDIA Mechatronics Industrial training' price='2200'></Bike>
-          <Bike onBook={onBook} data='Skyline Industries' price='500'></Bike>
-          <Bike onBook={onBook} data='Tesla Industries' price='300'></Bike>
-          <Bike onBook={onBook}></Bike>
-          {/* <Bike onBook={onBook}></Bike> */}
-        </div>
-      {/* </div> */}
-      {/* -top-2/4 */}
+      <Header></Header>
+      <div className=' m-6 p-1 h-2/3 flex justify-evenly bikeComponentHolder'>
+        <Bike onBook={onBook} data='ROBONAUTS INDIA Mechatronics Industrial training' price='2200' elegibility='1st year'></Bike>
+        <Bike onBook={onBook} data='Skyline Industries' price='500' ></Bike>
+        <Bike onBook={onBook} data='Tesla Industries' price='300' ></Bike>
+        <Bike onBook={onBook} ></Bike>
+      </div>
+      <div className='hidden bikeComponentHolder2 '>
+        <Bike onBook={onBook} data='ROBONAUTS INDIA Mechatronics Industrial training' price='2200' elegibility='1st year'></Bike>
+        <Bike onBook={onBook} data='Skyline Industries' price='500' ></Bike>
+        <Bike onBook={onBook} data='Tesla Industries' price='300' ></Bike>
+        <Bike onBook={onBook} ></Bike>
+      </div>
       <div id='popup' className='border border-white  w-2/6 absolute -top-2/4 left-1/3 popup transition-all ease-in-out' style={{ height: '48%' }}>
         <div className='h-7 w-7 absolute flex justify-center items-center right-0 mr-4 mt-1'>
           <button onClick={close}>
-          <i className="fa-solid fa-x "></i>
+            <i className="fa-solid fa-x "></i>
           </button>
         </div>
         <form className='flex justify-center flex-col items-center' onSubmit={onSubmit}>

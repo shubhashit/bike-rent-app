@@ -6,7 +6,6 @@
 
 }
 
-
 .home,
 .contact,
 .working {
@@ -46,7 +45,7 @@
 }
 
 .working p {
-    font-size: 10px;
+    font-size: 1.5vw;
 }
 
 .working h1 {
@@ -80,14 +79,12 @@
 }
 
 .booking-info {
-    /* position: absolute; */
     z-index: 2;
     top: 30%;
     text-align: center;
     left: 17%;
     width: 25%;
-    height: 35%;
-    /* border: 3px solid rgb(107, 124, 255); */
+    height: 20vw;
     border-radius: 50px;
     background: linear-gradient(145deg, #b3cccf, #d5f3f6);
     box-shadow: 22px 22px 38px #839698,
@@ -100,8 +97,6 @@
     border-radius: 7px;
     font-weight: bold;
     cursor: pointer;
-    /* padding: 6px; */
-    /* margin-top: 4px; */
     background-color: rgba(240, 248, 255, 0.16);
     border: 3px solid rgb(107, 124, 255);
     color: rgb(107, 124, 255);
@@ -114,8 +109,6 @@
 }
 
 #feature-1 {
-    /* border-radius: 50px; */
-    /* border-radius: 50px; */
     background: linear-gradient(315deg, #a1b8ba, #c0dadd);
     box-shadow: -22px -22px 38px #768789,
         22px 22px 38px #f0ffff;
@@ -150,6 +143,30 @@
 .featureclass:hover {
 
     background: linear-gradient(225deg, #a7c1c3, #c7e5e8);
-    /* box-shadow: -22px 22px 100px #7b8d8f, */
-        /* 22px -22px 100px #f9ffff; */
+}
+
+@media all and (max-width: 600px) {
+    .booking-info {
+        width: 60%;
+        height: 40%;
+        
+    }
+    .image{
+        display: none;
+    }
+    .booking-info h1{
+        font-size: 24px;
+        color: red;
+    }
+    .booking-info button{
+        height: 50px;
+        width: 70px;
+        font-size: 15px;
+        padding: 0;
+        margin-top: 30px;
+    }
+    .booking-info p{
+        font-size: 20px;
+    }
+
 }
